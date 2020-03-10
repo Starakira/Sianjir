@@ -1,24 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T17-yl-lK7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Cuaca-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sianjir" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Cuaca" image="cloud.fill" catalog="system" id="28A-Th-GCG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="133.92857142857142"/>
+        </scene>
+        <!--Transportaso Umum-->
+        <scene sceneID="n8U-JN-xr5">
+            <objects>
+                <viewController id="jMJ-dd-PNo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x91-SI-xcU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="gcV-tK-r6n"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Transportaso Umum" image="Transport Icon" id="uZf-so-7pe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hMg-Co-tmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="1516"/>
+        </scene>
+        <!--Info Banjir-->
+        <scene sceneID="4q7-eV-TzR">
+            <objects>
+                <viewController id="Qqo-Ae-B1k" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YnN-Kr-UDH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="cud-FZ-w5t"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Info Banjir" image="Transport Icon" id="WK5-cM-rsI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1zH-WW-Dkp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="824"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="WA9-OP-JGh">
+            <objects>
+                <viewController id="eaO-pc-8QB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="155-Da-cHH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="7Bx-tF-eSZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nKv-0g-5hc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3171.0144927536235" y="133.92857142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="h93-r9-YcN">
+            <objects>
+                <viewController id="kRD-UT-DHd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="65p-sb-Dzf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6gd-Xe-0OA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y2f-BV-MOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2447.826086956522" y="133.92857142857142"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="wU8-iH-u6M">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="T17-yl-lK7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nzs-iC-Zkg">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="NnW-CX-Mud"/>
+                        <segue destination="Qqo-Ae-B1k" kind="relationship" relationship="viewControllers" id="eMZ-AX-r7k"/>
+                        <segue destination="jMJ-dd-PNo" kind="relationship" relationship="viewControllers" id="Crl-K6-iPv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LSw-5L-hft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-72" y="736"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Transport Icon" width="23" height="23"/>
+        <image name="cloud.fill" catalog="system" width="64" height="42"/>
+    </resources>
 </document>
