@@ -15,6 +15,7 @@
 		D92B44CD2417796100B3AC12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D92B44CB2417796100B3AC12 /* LaunchScreen.storyboard */; };
 		D92B44D82417796100B3AC12 /* SianjirTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B44D72417796100B3AC12 /* SianjirTests.swift */; };
 		D92B44E32417796100B3AC12 /* SianjirUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B44E22417796100B3AC12 /* SianjirUITests.swift */; };
+		D92B44F12418FC4700B3AC12 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B44F02418FC4700B3AC12 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D92B44DE2417796100B3AC12 /* SianjirUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SianjirUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D92B44E22417796100B3AC12 /* SianjirUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SianjirUITests.swift; sourceTree = "<group>"; };
 		D92B44E42417796100B3AC12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D92B44F02418FC4700B3AC12 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				D92B44C02417795F00B3AC12 /* AppDelegate.swift */,
 				D92B44C22417795F00B3AC12 /* SceneDelegate.swift */,
 				D92B44C42417795F00B3AC12 /* ViewController.swift */,
+				D92B44F02418FC4700B3AC12 /* InfoViewController.swift */,
 				D92B44C62417795F00B3AC12 /* Main.storyboard */,
 				D92B44C92417796100B3AC12 /* Assets.xcassets */,
 				D92B44CB2417796100B3AC12 /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				D92B44C52417795F00B3AC12 /* ViewController.swift in Sources */,
 				D92B44C12417795F00B3AC12 /* AppDelegate.swift in Sources */,
+				D92B44F12418FC4700B3AC12 /* InfoViewController.swift in Sources */,
 				D92B44C32417795F00B3AC12 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

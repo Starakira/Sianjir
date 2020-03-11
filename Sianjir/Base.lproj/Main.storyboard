@@ -88,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="133.92857142857142"/>
+            <point key="canvasLocation" x="1048" y="852"/>
         </scene>
         <!--Transportasi Umum-->
         <scene sceneID="n8U-JN-xr5">
@@ -104,23 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMg-Co-tmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="1516"/>
-        </scene>
-        <!--Info Banjir-->
-        <scene sceneID="4q7-eV-TzR">
-            <objects>
-                <viewController id="Qqo-Ae-B1k" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YnN-Kr-UDH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="cud-FZ-w5t"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Info Banjir" image="Location Icon" id="WK5-cM-rsI"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1zH-WW-Dkp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1048" y="824"/>
+            <point key="canvasLocation" x="1048" y="1566"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="WA9-OP-JGh">
@@ -163,14 +147,105 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="NnW-CX-Mud"/>
-                        <segue destination="Qqo-Ae-B1k" kind="relationship" relationship="viewControllers" id="eMZ-AX-r7k"/>
-                        <segue destination="jMJ-dd-PNo" kind="relationship" relationship="viewControllers" id="Crl-K6-iPv"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="qOM-vC-102"/>
+                        <segue destination="Zcj-7U-3Fs" kind="relationship" relationship="viewControllers" id="opD-mF-qVP"/>
+                        <segue destination="jMJ-dd-PNo" kind="relationship" relationship="viewControllers" id="wFM-cA-tMR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSw-5L-hft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-72" y="736"/>
+        </scene>
+        <!--Info Banjir-->
+        <scene sceneID="LZI-Ru-vsB">
+            <objects>
+                <viewController title="Info Banjir" id="Zcj-7U-3Fs" customClass="InfoViewController" customModule="Sianjir" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jVc-42-Lcf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GfE-9G-qyB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="xh5-Bd-tmi" kind="embed" id="58I-uP-4oo"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qQg-Tq-XJ8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="7QW-lV-Avm" kind="embed" id="8EA-x1-3fW"/>
+                                </connections>
+                            </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NQn-XR-rA8">
+                                <rect key="frame" x="20" y="44" width="131" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="switchViewsWithSender:" destination="Zcj-7U-3Fs" eventType="valueChanged" id="N7v-cL-5ir"/>
+                                </connections>
+                            </segmentedControl>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="cs9-kL-OFD">
+                                <rect key="frame" x="300" y="44" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="he9-sz-qht"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Info Banjir" image="Location Icon" id="KxP-Ds-Fpu"/>
+                    <connections>
+                        <outlet property="firstView" destination="GfE-9G-qyB" id="cTx-sZ-KUX"/>
+                        <outlet property="secondView" destination="qQg-Tq-XJ8" id="ARh-2R-uyc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3mN-HS-7Hw" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="133.92857142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DMO-QQ-FYB">
+            <objects>
+                <viewController id="xh5-Bd-tmi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wBD-8d-x8M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mHf-qz-VmH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W4g-W1-Bkz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1782.608695652174" y="-59.263392857142854"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yKh-82-SSY">
+            <objects>
+                <viewController id="7QW-lV-Avm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="agO-uC-PbA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="WUu-lI-UUy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MGL-Nx-rcd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1782.608695652174" y="564.84375"/>
         </scene>
     </scenes>
     <resources>
