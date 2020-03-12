@@ -170,21 +170,6 @@
             </objects>
             <point key="canvasLocation" x="3171.0144927536235" y="133.92857142857142"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="h93-r9-YcN">
-            <objects>
-                <viewController id="kRD-UT-DHd" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="65p-sb-Dzf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6gd-Xe-0OA"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Y2f-BV-MOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2447.826086956522" y="133.92857142857142"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wU8-iH-u6M">
             <objects>
@@ -228,6 +213,23 @@
                                     <action selector="switchViewsWithSender:" destination="Zcj-7U-3Fs" eventType="valueChanged" id="N7v-cL-5ir"/>
                                 </connections>
                             </segmentedControl>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u2R-Sz-g0O">
+                                <rect key="frame" x="0.0" y="762" width="414" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" fixedFrame="YES" text="" placeholder="Cari " translatesAutoresizingMaskIntoConstraints="NO" id="Ffh-NY-DGf">
+                                        <rect key="frame" x="0.0" y="-4" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="he9-sz-qht"/>
@@ -467,7 +469,7 @@
         <!--Table View Controller-->
         <scene sceneID="1Mo-61-j1K">
             <objects>
-                <tableViewController id="Sb5-Gf-wTO" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="currentContext" id="Sb5-Gf-wTO" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="D7N-eX-zqo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
