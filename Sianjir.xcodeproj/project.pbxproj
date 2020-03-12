@@ -308,6 +308,7 @@
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
+			wrapsLines = 1;
 		};
 		D92B44CB2417796100B3AC12 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -445,7 +446,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = maul.Sianjir;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mochamaulana.Sianjir;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -463,7 +464,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = maul.Sianjir;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mochamaulana.Sianjir;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
