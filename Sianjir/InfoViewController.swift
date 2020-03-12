@@ -7,27 +7,25 @@
 //
 
 import UIKit
+import MapKit
 
 class InfoViewController: UIViewController {
 
-    @IBOutlet weak var firstView: UIView!
-    @IBOutlet weak var secondView: UIView!
-
-       override func viewDidLoad() {
+    @IBOutlet weak var mapView: MKMapView!
+    
+    override func viewDidLoad() {
            super.viewDidLoad()
             
        }
 
        @IBAction func switchViews(sender: UISegmentedControl){
-           if sender.selectedSegmentIndex == 0 {
-               firstView.alpha = 1
-               secondView.alpha = 0
-           } else {
-               firstView.alpha = 0
-               secondView.alpha = 1
-           }
-       }
-
-
+        switch sender.selectedSegmentIndex {
+        case 1:
+            mapView.mapType = .hybrid
+        default:
+            mapView.mapType = .standard
+        }
+           
+    }
 }
 

@@ -213,20 +213,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GfE-9G-qyB">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uxk-DB-ZlH">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="xh5-Bd-tmi" kind="embed" id="58I-uP-4oo"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qQg-Tq-XJ8">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="7QW-lV-Avm" kind="embed" id="8EA-x1-3fW"/>
-                                </connections>
-                            </containerView>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NQn-XR-rA8">
                                 <rect key="frame" x="20" y="44" width="131" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -238,65 +228,18 @@
                                     <action selector="switchViewsWithSender:" destination="Zcj-7U-3Fs" eventType="valueChanged" id="N7v-cL-5ir"/>
                                 </connections>
                             </segmentedControl>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="cs9-kL-OFD">
-                                <rect key="frame" x="300" y="44" width="94" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stepper>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="he9-sz-qht"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Info Banjir" image="Location Icon" id="KxP-Ds-Fpu"/>
                     <connections>
-                        <outlet property="firstView" destination="GfE-9G-qyB" id="cTx-sZ-KUX"/>
-                        <outlet property="secondView" destination="qQg-Tq-XJ8" id="ARh-2R-uyc"/>
+                        <outlet property="mapView" destination="uxk-DB-ZlH" id="yGx-Ph-Nzm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3mN-HS-7Hw" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754" y="-143"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="DMO-QQ-FYB">
-            <objects>
-                <viewController id="xh5-Bd-tmi" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wBD-8d-x8M">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mHf-qz-VmH">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Czx-zh-Lk4"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W4g-W1-Bkz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1684" y="-473"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="yKh-82-SSY">
-            <objects>
-                <viewController id="7QW-lV-Avm" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="agO-uC-PbA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="satellite" translatesAutoresizingMaskIntoConstraints="NO" id="hbt-aT-3Gb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Poc-eC-HVj"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MGL-Nx-rcd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1683" y="172"/>
+            <point key="canvasLocation" x="753.62318840579712" y="-143.30357142857142"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Jhl-Bb-ctx">
@@ -582,7 +525,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SjH-qh-s59" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2509" y="852"/>
+            <point key="canvasLocation" x="1777" y="917"/>
         </scene>
     </scenes>
     <resources>
