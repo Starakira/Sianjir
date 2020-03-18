@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9FC1531D241A39DD00D1380B /* PublicMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC1531C241A39DD00D1380B /* PublicMapViewController.swift */; };
 		D92B44C12417795F00B3AC12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B44C02417795F00B3AC12 /* AppDelegate.swift */; };
 		D92B44C32417795F00B3AC12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B44C22417795F00B3AC12 /* SceneDelegate.swift */; };
 		D92B44C52417795F00B3AC12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B44C42417795F00B3AC12 /* ViewController.swift */; };
@@ -17,6 +16,10 @@
 		D92B44D82417796100B3AC12 /* SianjirTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B44D72417796100B3AC12 /* SianjirTests.swift */; };
 		D92B44E32417796100B3AC12 /* SianjirUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B44E22417796100B3AC12 /* SianjirUITests.swift */; };
 		D92B44F12418FC4700B3AC12 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B44F02418FC4700B3AC12 /* InfoViewController.swift */; };
+		D94AF99324201B60003F78AA /* SplashScreenControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94AF99224201B60003F78AA /* SplashScreenControllerViewController.swift */; };
+		D94AF995242093C6003F78AA /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94AF994242093C6003F78AA /* WeatherViewController.swift */; };
+		D94AF9992420B400003F78AA /* EmbedWeatherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94AF9982420B400003F78AA /* EmbedWeatherTableViewController.swift */; };
+		D9624AEF2421EC6100B4A30F /* emergency.wav in Resources */ = {isa = PBXBuildFile; fileRef = D9624AEE2421EC6100B4A30F /* emergency.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9FC1531C241A39DD00D1380B /* PublicMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicMapViewController.swift; sourceTree = "<group>"; };
 		D92B44BD2417795F00B3AC12 /* Sianjir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sianjir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D92B44C02417795F00B3AC12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D92B44C22417795F00B3AC12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,10 @@
 		D92B44E22417796100B3AC12 /* SianjirUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SianjirUITests.swift; sourceTree = "<group>"; };
 		D92B44E42417796100B3AC12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D92B44F02418FC4700B3AC12 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		D94AF99224201B60003F78AA /* SplashScreenControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenControllerViewController.swift; sourceTree = "<group>"; };
+		D94AF994242093C6003F78AA /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		D94AF9982420B400003F78AA /* EmbedWeatherTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbedWeatherTableViewController.swift; sourceTree = "<group>"; };
+		D9624AEE2421EC6100B4A30F /* emergency.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = emergency.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +109,14 @@
 		D92B44BF2417795F00B3AC12 /* Sianjir */ = {
 			isa = PBXGroup;
 			children = (
+				D9624AF02421ECD100B4A30F /* Sound */,
 				D92B44C02417795F00B3AC12 /* AppDelegate.swift */,
 				D92B44C22417795F00B3AC12 /* SceneDelegate.swift */,
 				D92B44C42417795F00B3AC12 /* ViewController.swift */,
+				D94AF99224201B60003F78AA /* SplashScreenControllerViewController.swift */,
 				D92B44F02418FC4700B3AC12 /* InfoViewController.swift */,
-				9FC1531C241A39DD00D1380B /* PublicMapViewController.swift */,
+				D94AF994242093C6003F78AA /* WeatherViewController.swift */,
+				D94AF9982420B400003F78AA /* EmbedWeatherTableViewController.swift */,
 				D92B44C62417795F00B3AC12 /* Main.storyboard */,
 				D92B44C92417796100B3AC12 /* Assets.xcassets */,
 				D92B44CB2417796100B3AC12 /* LaunchScreen.storyboard */,
@@ -132,6 +141,14 @@
 				D92B44E42417796100B3AC12 /* Info.plist */,
 			);
 			path = SianjirUITests;
+			sourceTree = "<group>";
+		};
+		D9624AF02421ECD100B4A30F /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				D9624AEE2421EC6100B4A30F /* emergency.wav */,
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +257,7 @@
 			files = (
 				D92B44CD2417796100B3AC12 /* LaunchScreen.storyboard in Resources */,
 				D92B44CA2417796100B3AC12 /* Assets.xcassets in Resources */,
+				D9624AEF2421EC6100B4A30F /* emergency.wav in Resources */,
 				D92B44C82417795F00B3AC12 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,9 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D94AF99324201B60003F78AA /* SplashScreenControllerViewController.swift in Sources */,
+				D94AF995242093C6003F78AA /* WeatherViewController.swift in Sources */,
 				D92B44C52417795F00B3AC12 /* ViewController.swift in Sources */,
+				D94AF9992420B400003F78AA /* EmbedWeatherTableViewController.swift in Sources */,
 				D92B44C12417795F00B3AC12 /* AppDelegate.swift in Sources */,
-				9FC1531D241A39DD00D1380B /* PublicMapViewController.swift in Sources */,
 				D92B44F12418FC4700B3AC12 /* InfoViewController.swift in Sources */,
 				D92B44C32417795F00B3AC12 /* SceneDelegate.swift in Sources */,
 			);
@@ -444,13 +464,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UHSYUAN5UV;
 				INFOPLIST_FILE = Sianjir/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mochamaulana.Sianjir;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maul.Sianjir;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -462,13 +482,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UHSYUAN5UV;
 				INFOPLIST_FILE = Sianjir/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mochamaulana.Sianjir;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maul.Sianjir;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
