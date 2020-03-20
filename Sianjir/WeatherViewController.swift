@@ -24,7 +24,7 @@ class WeatherViewController: UIViewController, UNUserNotificationCenterDelegate 
         
         permission()
         rainIntensity()
-        localNotif()
+        //localNotif()
         headerBG()
         
     }
@@ -82,9 +82,10 @@ class WeatherViewController: UIViewController, UNUserNotificationCenterDelegate 
         let imagesStats1 = UIImage(systemName: "cloud.bolt.rain.fill")
         let imagesStats2 = UIImage(systemName: "cloud.rain.fill")
         
-        if hour >= 12 && hour <= 20 {
+        if hour >= 14 && hour <= 20 {
             labelStatusWeather.text = "Hujan Lebat"
             imageStatus.image = imagesStats1
+            showNotifications()
             
         } else {
             labelStatusWeather.text = "Hujan Ringan"
@@ -112,13 +113,12 @@ class WeatherViewController: UIViewController, UNUserNotificationCenterDelegate 
     UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
-    func localNotif(){
+    /*func localNotif(){
         if labelStatusWeather.isEqual("Hujan Lebat") {
-            showNotifications()
-        } else {
+                    } else {
             print("Tidak ada warning")
         }
-    }
+    }*/
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.alert, .sound])
