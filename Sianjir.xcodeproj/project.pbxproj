@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B3CBA36B5D9CB518A3D2249 /* Pods_Sianjir_SianjirUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910F5C96AB2CCB5DE36BF379 /* Pods_Sianjir_SianjirUITests.framework */; };
+		59654860A4152965F50371F3 /* Pods_Sianjir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CFCC55E2256CA61588A8A5 /* Pods_Sianjir.framework */; };
+		681423C4CC7D3E1D09290600 /* Pods_SianjirTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 347EC48A10975528446A7F6F /* Pods_SianjirTests.framework */; };
+		9F631C70242B1403007DDFBC /* MapModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F631C6F242B1403007DDFBC /* MapModalView.swift */; };
 		D92B44C12417795F00B3AC12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B44C02417795F00B3AC12 /* AppDelegate.swift */; };
 		D92B44C32417795F00B3AC12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B44C22417795F00B3AC12 /* SceneDelegate.swift */; };
 		D92B44C52417795F00B3AC12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B44C42417795F00B3AC12 /* ViewController.swift */; };
@@ -40,6 +44,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24CFCC55E2256CA61588A8A5 /* Pods_Sianjir.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sianjir.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		347EC48A10975528446A7F6F /* Pods_SianjirTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SianjirTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4671349C6416B0DFAD5CCAF9 /* Pods-SianjirTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SianjirTests.release.xcconfig"; path = "Target Support Files/Pods-SianjirTests/Pods-SianjirTests.release.xcconfig"; sourceTree = "<group>"; };
+		77755ADB258A922E70AAE776 /* Pods-Sianjir.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sianjir.release.xcconfig"; path = "Target Support Files/Pods-Sianjir/Pods-Sianjir.release.xcconfig"; sourceTree = "<group>"; };
+		864D9CEA0EBCF6CB127FC34C /* Pods-SianjirTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SianjirTests.debug.xcconfig"; path = "Target Support Files/Pods-SianjirTests/Pods-SianjirTests.debug.xcconfig"; sourceTree = "<group>"; };
+		910F5C96AB2CCB5DE36BF379 /* Pods_Sianjir_SianjirUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sianjir_SianjirUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F631C6F242B1403007DDFBC /* MapModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModalView.swift; sourceTree = "<group>"; };
+		AFF5CEF0EDD271C32A5488DD /* Pods-Sianjir-SianjirUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sianjir-SianjirUITests.release.xcconfig"; path = "Target Support Files/Pods-Sianjir-SianjirUITests/Pods-Sianjir-SianjirUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B40100B9ED19E67D2A70B9AE /* Pods-Sianjir-SianjirUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sianjir-SianjirUITests.debug.xcconfig"; path = "Target Support Files/Pods-Sianjir-SianjirUITests/Pods-Sianjir-SianjirUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CA68E49BE1CDED836895E4DE /* Pods-Sianjir.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sianjir.debug.xcconfig"; path = "Target Support Files/Pods-Sianjir/Pods-Sianjir.debug.xcconfig"; sourceTree = "<group>"; };
 		D92B44BD2417795F00B3AC12 /* Sianjir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sianjir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D92B44C02417795F00B3AC12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D92B44C22417795F00B3AC12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59654860A4152965F50371F3 /* Pods_Sianjir.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				681423C4CC7D3E1D09290600 /* Pods_SianjirTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +96,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B3CBA36B5D9CB518A3D2249 /* Pods_Sianjir_SianjirUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD3D0669A4A905F235BB2A19 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA68E49BE1CDED836895E4DE /* Pods-Sianjir.debug.xcconfig */,
+				77755ADB258A922E70AAE776 /* Pods-Sianjir.release.xcconfig */,
+				B40100B9ED19E67D2A70B9AE /* Pods-Sianjir-SianjirUITests.debug.xcconfig */,
+				AFF5CEF0EDD271C32A5488DD /* Pods-Sianjir-SianjirUITests.release.xcconfig */,
+				864D9CEA0EBCF6CB127FC34C /* Pods-SianjirTests.debug.xcconfig */,
+				4671349C6416B0DFAD5CCAF9 /* Pods-SianjirTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BBAB4CA6762996FFBB9EEC15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24CFCC55E2256CA61588A8A5 /* Pods_Sianjir.framework */,
+				910F5C96AB2CCB5DE36BF379 /* Pods_Sianjir_SianjirUITests.framework */,
+				347EC48A10975528446A7F6F /* Pods_SianjirTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D92B44B42417795F00B3AC12 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +134,8 @@
 				D92B44D62417796100B3AC12 /* SianjirTests */,
 				D92B44E12417796100B3AC12 /* SianjirUITests */,
 				D92B44BE2417795F00B3AC12 /* Products */,
+				AD3D0669A4A905F235BB2A19 /* Pods */,
+				BBAB4CA6762996FFBB9EEC15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +157,7 @@
 				D92B44C22417795F00B3AC12 /* SceneDelegate.swift */,
 				D92B44C42417795F00B3AC12 /* ViewController.swift */,
 				D94AF99224201B60003F78AA /* SplashScreenControllerViewController.swift */,
+				9F631C6F242B1403007DDFBC /* MapModalView.swift */,
 				D92B44F02418FC4700B3AC12 /* InfoViewController.swift */,
 				D94AF994242093C6003F78AA /* WeatherViewController.swift */,
 				D94AF9982420B400003F78AA /* EmbedWeatherTableViewController.swift */,
@@ -158,9 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D92B44E72417796100B3AC12 /* Build configuration list for PBXNativeTarget "Sianjir" */;
 			buildPhases = (
+				8F9B7D3289915C04355F75DA /* [CP] Check Pods Manifest.lock */,
 				D92B44B92417795F00B3AC12 /* Sources */,
 				D92B44BA2417795F00B3AC12 /* Frameworks */,
 				D92B44BB2417795F00B3AC12 /* Resources */,
+				038BE1B87D10C100CC7351B1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -175,6 +221,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D92B44EA2417796100B3AC12 /* Build configuration list for PBXNativeTarget "SianjirTests" */;
 			buildPhases = (
+				E0DA49D5F2159EA432D160CD /* [CP] Check Pods Manifest.lock */,
 				D92B44CF2417796100B3AC12 /* Sources */,
 				D92B44D02417796100B3AC12 /* Frameworks */,
 				D92B44D12417796100B3AC12 /* Resources */,
@@ -193,9 +240,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D92B44ED2417796100B3AC12 /* Build configuration list for PBXNativeTarget "SianjirUITests" */;
 			buildPhases = (
+				43B2E2404A53E7388644F82A /* [CP] Check Pods Manifest.lock */,
 				D92B44DA2417796100B3AC12 /* Sources */,
 				D92B44DB2417796100B3AC12 /* Frameworks */,
 				D92B44DC2417796100B3AC12 /* Resources */,
+				55E639542F1836CF30F1435E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -278,6 +327,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		038BE1B87D10C100CC7351B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sianjir/Pods-Sianjir-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sianjir/Pods-Sianjir-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sianjir/Pods-Sianjir-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43B2E2404A53E7388644F82A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sianjir-SianjirUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55E639542F1836CF30F1435E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sianjir-SianjirUITests/Pods-Sianjir-SianjirUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sianjir-SianjirUITests/Pods-Sianjir-SianjirUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sianjir-SianjirUITests/Pods-Sianjir-SianjirUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F9B7D3289915C04355F75DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sianjir-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0DA49D5F2159EA432D160CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SianjirTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D92B44B92417795F00B3AC12 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -286,6 +438,7 @@
 				D94AF99324201B60003F78AA /* SplashScreenControllerViewController.swift in Sources */,
 				D94AF995242093C6003F78AA /* WeatherViewController.swift in Sources */,
 				D92B44C52417795F00B3AC12 /* ViewController.swift in Sources */,
+				9F631C70242B1403007DDFBC /* MapModalView.swift in Sources */,
 				D94AF9992420B400003F78AA /* EmbedWeatherTableViewController.swift in Sources */,
 				D92B44C12417795F00B3AC12 /* AppDelegate.swift in Sources */,
 				D92B44F12418FC4700B3AC12 /* InfoViewController.swift in Sources */,
@@ -461,6 +614,7 @@
 		};
 		D92B44E82417796100B3AC12 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA68E49BE1CDED836895E4DE /* Pods-Sianjir.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -479,6 +633,7 @@
 		};
 		D92B44E92417796100B3AC12 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77755ADB258A922E70AAE776 /* Pods-Sianjir.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -497,6 +652,7 @@
 		};
 		D92B44EB2417796100B3AC12 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 864D9CEA0EBCF6CB127FC34C /* Pods-SianjirTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -519,6 +675,7 @@
 		};
 		D92B44EC2417796100B3AC12 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4671349C6416B0DFAD5CCAF9 /* Pods-SianjirTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -541,6 +698,7 @@
 		};
 		D92B44EE2417796100B3AC12 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B40100B9ED19E67D2A70B9AE /* Pods-Sianjir-SianjirUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -561,6 +719,7 @@
 		};
 		D92B44EF2417796100B3AC12 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFF5CEF0EDD271C32A5488DD /* Pods-Sianjir-SianjirUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
