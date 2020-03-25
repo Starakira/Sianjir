@@ -105,7 +105,7 @@ class WeatherViewController: UIViewController, UNUserNotificationCenterDelegate 
         let content = UNMutableNotificationContent()
         content.title = "Waspada Banjir"
         content.body = "Akan terjadi hujan lebat, mohon untuk waspada kemungkinan terjadi banjir !!"
-        content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "emergency.wav"))
+        content.sound = UNNotificationSound.default
         
         let triggerNotif = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         let request = UNNotificationRequest(identifier: "notificationWeather", content: content, trigger: triggerNotif)
