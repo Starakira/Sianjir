@@ -47,8 +47,8 @@ class ViewController: UIViewController {
             imageView.contentMode = .scaleAspectFit
             imageView.center = CGPoint(x:scrollWidth/2,y: scrollHeight/2 - 50)
             
-            let caption = UILabel.init(frame: CGRect(x:32,y:imageView.frame.maxY+52,width:scrollWidth-64,height:50))
-            caption.numberOfLines = 2
+            let caption = UILabel.init(frame: CGRect(x:32,y:imageView.frame.maxY+52,width:scrollWidth-64,height:72))
+            caption.numberOfLines = 3
             caption.textAlignment = .center
             caption.font = UIFont.boldSystemFont(ofSize: 16.0)
             caption.textColor = UIColor(named: K.color.mainColor)
