@@ -11,7 +11,7 @@ import MapKit
 import BonsaiController
 
 class InfoViewController: UIViewController {
-
+    
     private let locationManager = CLLocationManager()
     private var currentCoordinate: CLLocationCoordinate2D?
     
@@ -19,9 +19,10 @@ class InfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         mapView.delegate = self
         configureLocationServices()
-       }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -45,22 +46,22 @@ class InfoViewController: UIViewController {
     }
     
     private func zoomToLatestLocation(with coordinate: CLLocationCoordinate2D) {
-        let zoomRegion = MKCoordinateRegion.init(center: coordinate, latitudinalMeters: 10000, longitudinalMeters: 10000)
+        let zoomRegion = MKCoordinateRegion.init(center: coordinate, latitudinalMeters: 1200, longitudinalMeters: 1200)
         mapView.setRegion((zoomRegion), animated: true)
     }
     
     private func addFloodAnnotations() {
         let lightFloodSymbol = MKPointAnnotation()
-        lightFloodSymbol.title = "Light Flood"
-        lightFloodSymbol.coordinate = CLLocationCoordinate2D(latitude: -6.273292, longitude: 106.741036)
+        lightFloodSymbol.title = K.banjirRingan
+        lightFloodSymbol.coordinate = CLLocationCoordinate2D(latitude: -6.176247, longitude: 106.84004)
         
         let mediumFloodSymbol = MKPointAnnotation()
-        mediumFloodSymbol.title = "Medium Flood"
-        mediumFloodSymbol.coordinate = CLLocationCoordinate2D(latitude: -6.073292, longitude: 106.841036)
+        mediumFloodSymbol.title = K.banjirSedang
+        mediumFloodSymbol.coordinate = CLLocationCoordinate2D(latitude: -6.176461, longitude: 106.839080)
         
         let heavyFloodSymbol = MKPointAnnotation()
-        heavyFloodSymbol.title = "Heavy Flood"
-        heavyFloodSymbol.coordinate = CLLocationCoordinate2D(latitude: -6.3721, longitude: 106.941036)
+        heavyFloodSymbol.title = K.banjirParah
+        heavyFloodSymbol.coordinate = CLLocationCoordinate2D(latitude: -6.173190, longitude: 106.839551)
         
         mapView.addAnnotation(lightFloodSymbol)
         mapView.addAnnotation(mediumFloodSymbol)
@@ -77,22 +78,6 @@ class InfoViewController: UIViewController {
         UIGraphicsEndImageContext()
         
         return resizedImage!
-    }
-    
-    @IBAction func UIModal(_ sender: Any) {
-        let smallVC = storyboard!.instantiateViewController(identifier: "SmallVC")
-        smallVC.transitioningDelegate = self
-        smallVC.modalPresentationStyle = .custom
-        present(smallVC, animated: true, completion: nil)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-   @IBAction func switchViews(sender: UISegmentedControl){
-        if segue.destination is InfoViewController {
-            segue.destination.transitioningDelegate = self
-            segue.destination.modalPresentationStyle = .custom
-        }
     }
     
     @IBAction func switchViews(sender: UISegmentedControl){
@@ -138,20 +123,20 @@ extension InfoViewController: CLLocationManagerDelegate {
 extension InfoViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "AnnotationView")
-
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: K.identifier.annotationView)
+        
         if annotationView == nil {
-            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "AnnotationView")
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: K.identifier.annotationView)
         }
         
-        if let title = annotation.title, title == "Light Flood" {
-            annotationView?.image = resizeAnnotationImage(imageName: "Banjir Ringan", imageWidth: 30, imageHeight: 30)
-        } else if let title = annotation.title, title == "Medium Flood" {
-            annotationView?.image = resizeAnnotationImage(imageName: "Banjir Sedang", imageWidth: 30, imageHeight: 30)
-        } else if let title = annotation.title, title == "Heavy Flood" {
-            annotationView?.image = resizeAnnotationImage(imageName: "Banjir Parah", imageWidth: 30, imageHeight: 30)
+        if let title = annotation.title, title == K.banjirRingan {
+            annotationView?.image = resizeAnnotationImage(imageName: K.banjirRingan, imageWidth: 30, imageHeight: 30)
+        } else if let title = annotation.title, title == K.banjirSedang {
+            annotationView?.image = resizeAnnotationImage(imageName: K.banjirSedang, imageWidth: 30, imageHeight: 30)
+        } else if let title = annotation.title, title == K.banjirParah {
+            annotationView?.image = resizeAnnotationImage(imageName: K.banjirParah, imageWidth: 30, imageHeight: 30)
         } else if annotation === mapView.userLocation {
-            annotationView?.image = UIImage(systemName: "circle.fill")
+            annotationView?.image = UIImage(systemName: K.image.circleFill)
         }
         
         annotationView?.canShowCallout = true
@@ -161,7 +146,6 @@ extension InfoViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         print("The annotation was selected : \(String(describing: view.annotation?.subtitle))")
-           
     }
 }
 
@@ -175,7 +159,7 @@ extension InfoViewController: BonsaiControllerDelegate {
     
     // return a Bonsai Controller with SlideIn or Bubble transition animator
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-    
+        
         // Slide animation from .left, .right, .top, .bottom
         return BonsaiController(fromDirection: .bottom, blurEffectStyle: .light, presentedViewController: presented, delegate: self)
         

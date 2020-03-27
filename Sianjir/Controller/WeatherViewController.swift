@@ -12,8 +12,7 @@ import UserNotifications
 class WeatherViewController: UIViewController, UNUserNotificationCenterDelegate {
     
     @IBOutlet weak var dateHeader: UILabel!
-    @IBOutlet weak var headerMorning: UIImageView!
-    @IBOutlet weak var headerNight: UIImageView!
+    @IBOutlet weak var headerImage: UIImageView!
     @IBOutlet weak var buttonNotif: UIButton!
     @IBOutlet weak var labelStatusWeather: UILabel!
     @IBOutlet weak var imageStatus: UIImageView!
@@ -42,32 +41,28 @@ class WeatherViewController: UIViewController, UNUserNotificationCenterDelegate 
     func headerBG() {
         let date = Date()
         let calendar = Calendar.current
-
+        
         let hour = calendar.component(.hour, from: date)
         //let hour = 6
         
         if hour >= 18 || hour <= 5 {
-            headerNight.alpha = 1.0
-            headerMorning.alpha = 0.0
-            print("Sukses")
+            headerImage.image = UIImage(named: K.image.headerNight)
         } else {
-            headerNight.alpha = 0.0
-            headerMorning.alpha = 1.0
-            print("gagal")
-            }
+            headerImage.image = UIImage(named: K.image.headerNoon)
+        }
     }
     
     func showAlertOff(){
-        let alertController = UIAlertController(title: "Pembertitahuan", message:
-            "Pemberitahuan telah dimatikan. ", preferredStyle: .alert)
+        let alertController = UIAlertController(title: K.pemberitahuan, message:
+            K.pemberitahuanNonaktif, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default))
         
         self.present(alertController, animated: true, completion: nil)
     }
     
     func showAlertOn(){
-        let alertController = UIAlertController(title: "Pembertitahuan", message:
-            "Pemberitahuan telah aktif. ", preferredStyle: .alert)
+        let alertController = UIAlertController(title: K.pemberitahuan, message:
+            K.pemberitahuanAktif, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default))
         
         self.present(alertController, animated: true, completion: nil)
@@ -76,54 +71,44 @@ class WeatherViewController: UIViewController, UNUserNotificationCenterDelegate 
     func rainIntensity(){
         let date = Date()
         let calendar = Calendar.current
-
+        
         let hour = calendar.component(.hour, from: date)
         
-        let imagesStats1 = UIImage(systemName: "cloud.bolt.rain.fill")
-        let imagesStats2 = UIImage(systemName: "cloud.rain.fill")
+        let imagesStats1 = UIImage(systemName: K.image.hujanPetir)
+        let imagesStats2 = UIImage(systemName: K.image.hujan)
         
         if hour >= 14 && hour <= 20 {
-            labelStatusWeather.text = "Hujan Lebat"
+            labelStatusWeather.text = K.hujanLebat
             imageStatus.image = imagesStats1
             showNotifications()
             
         } else {
-            labelStatusWeather.text = "Hujan Ringan"
+            labelStatusWeather.text = K.hujanRingan
             imageStatus.image = imagesStats2
         }
     }
     
     func permission(){
         UNUserNotificationCenter.current().delegate = self
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert]) {
-        (granted, error) in
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
+            (granted, error) in
             
         }
     }
     
     func showNotifications () {
         let content = UNMutableNotificationContent()
-        content.title = "Waspada Banjir"
-        content.body = "Akan terjadi hujan lebat, mohon untuk waspada kemungkinan terjadi banjir !!"
-        content.sound = UNNotificationSound.default
+        content.title = K.waspadaBanjir
+        content.body = K.waspadaBanjirWarning
+        content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "emergency.wav"))
         
         let triggerNotif = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-        let request = UNNotificationRequest(identifier: "notificationWeather", content: content, trigger: triggerNotif)
-
-    UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        let request = UNNotificationRequest(identifier: K.identifier.notificationIdentifier, content: content, trigger: triggerNotif)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
-    
-    /*func localNotif(){
-        if labelStatusWeather.isEqual("Hujan Lebat") {
-                    } else {
-            print("Tidak ada warning")
-        }
-    }*/
-    
+
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.alert, .sound])
     }
-    
-    
 }
-

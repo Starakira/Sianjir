@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,11 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="BWo-0h-8KY">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Header Night" translatesAutoresizingMaskIntoConstraints="NO" id="1oR-F9-rtH">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Header Noon" translatesAutoresizingMaskIntoConstraints="NO" id="BWo-0h-8KY">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -139,8 +136,7 @@
                     <connections>
                         <outlet property="buttonNotif" destination="a0V-ZI-ITd" id="y76-bP-KRI"/>
                         <outlet property="dateHeader" destination="6Gt-ci-BPq" id="lcG-ci-QfQ"/>
-                        <outlet property="headerMorning" destination="BWo-0h-8KY" id="XGu-cH-MiK"/>
-                        <outlet property="headerNight" destination="1oR-F9-rtH" id="4Lo-Bc-PjE"/>
+                        <outlet property="headerImage" destination="BWo-0h-8KY" id="XGu-cH-MiK"/>
                         <outlet property="imageStatus" destination="bYN-r7-ZY2" id="Nll-66-4hy"/>
                         <outlet property="labelStatusWeather" destination="N5z-Vi-0id" id="Ii1-EI-ZdN"/>
                     </connections>
@@ -236,19 +232,26 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u2R-Sz-g0O">
                                 <rect key="frame" x="0.0" y="762" width="414" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <searchBar contentMode="redraw" fixedFrame="YES" text="" placeholder="Cari " translatesAutoresizingMaskIntoConstraints="NO" id="Ffh-NY-DGf">
-                                        <rect key="frame" x="0.0" y="-4" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </searchBar>
-                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Siu-CR-MUm">
+                                <rect key="frame" x="0.0" y="675" width="414" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MBQ-nh-ARg">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <connections>
+                                            <segue destination="Jw3-4R-Mkd" kind="embed" id="Zib-5R-gz1"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLJ-I0-fSc">
                                 <rect key="frame" x="373" y="53" width="21" height="22"/>
@@ -258,6 +261,11 @@
                                     <action selector="showUserLocation:" destination="Zcj-7U-3Fs" eventType="touchUpInside" id="vDg-w7-iMb"/>
                                 </connections>
                             </button>
+                            <searchBar contentMode="redraw" fixedFrame="YES" text="" placeholder="Cari " translatesAutoresizingMaskIntoConstraints="NO" id="Ffh-NY-DGf">
+                                <rect key="frame" x="0.0" y="631" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="he9-sz-qht"/>
@@ -621,65 +629,77 @@
             </objects>
             <point key="canvasLocation" x="1776.8115942028987" y="713.83928571428567"/>
         </scene>
-        <!--Modal Notif-->
-        <scene sceneID="VqO-x2-esb">
+        <!--List Banjir-->
+        <scene sceneID="yFc-Ob-OiH">
             <objects>
-                <tableViewController title="Modal Notif" id="XmJ-q1-71B" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="0aK-j6-fL5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController title="List Banjir" id="Jw3-4R-Mkd" customClass="EmbedRoadListViewController" customModule="Sianjir" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bnQ-L1-vOY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="Kjw-cf-Wwa">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        </view>
-                        <sections>
-                            <tableViewSection id="Es4-2c-z2E">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="tTU-Br-an1">
-                                        <rect key="frame" x="0.0" y="62" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tTU-Br-an1" id="vhT-6r-xRI">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bell" catalog="system" id="xiK-06-7eO">
-                                                    <rect key="frame" x="20" y="9.5" width="24" height="25.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="tintColor" red="0.99215686270000003" green="0.34901960780000002" blue="0.34901960780000002" alpha="0.88" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pemberitahuan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFi-Ja-Phj">
-                                                    <rect key="frame" x="52" y="13" width="104" height="18"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vXZ-n9-YKg">
-                                                    <rect key="frame" x="345" y="7" width="49" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </switch>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="XmJ-q1-71B" id="zma-9p-SUE"/>
-                            <outlet property="delegate" destination="XmJ-q1-71B" id="Lxf-xl-Z9p"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vS3-yO-8ex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c0U-dM-ugj">
+                                <rect key="frame" x="0.0" y="10" width="414" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="h3j-0V-e0E"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="c0U-dM-ugj" id="2S3-F7-MFz"/>
+                        <segue destination="oRh-tc-LOd" kind="presentation" identifier="modalRoadInfo" id="f6p-0Z-3XD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zs1-we-ujR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2802" y="945"/>
+            <point key="canvasLocation" x="1638" y="-48"/>
+        </scene>
+        <!--Road Info-->
+        <scene sceneID="ewr-K7-udt">
+            <objects>
+                <viewController title="Road Info" id="oRh-tc-LOd" customClass="RoadInfoViewController" customModule="Sianjir" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nxn-VW-N07">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Banjir Ringan" translatesAutoresizingMaskIntoConstraints="NO" id="t6L-Uh-Ozi">
+                                <rect key="frame" x="308" y="44" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Road Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVZ-c3-TzS">
+                                <rect key="frame" x="39" y="44" width="92" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" name="Main Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thi-55-WEL">
+                                <rect key="frame" x="39" y="66" width="50" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="0LI-Uc-EzO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uzT-u5-oHe"/>
+                    <connections>
+                        <outlet property="roadImage" destination="t6L-Uh-Ozi" id="wnF-Md-wMf"/>
+                        <outlet property="roadName" destination="gVZ-c3-TzS" id="QSA-9E-eGY"/>
+                        <outlet property="roadStatus" destination="thi-55-WEL" id="71r-N3-UEk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bAk-ss-ugd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2433" y="-49"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Header" width="414" height="217"/>
-        <image name="Header Night" width="414" height="217"/>
+        <image name="Banjir Ringan" width="200" height="200"/>
+        <image name="Header Noon" width="414" height="217"/>
         <image name="Location Icon" width="23" height="23"/>
         <image name="Logo Splash" width="2295" height="748"/>
         <image name="Petik" width="51" height="33"/>
@@ -692,5 +712,8 @@
         <image name="cloud.sun.fill" catalog="system" width="64" height="44"/>
         <image name="location.fill" catalog="system" width="64" height="56"/>
         <image name="wind" catalog="system" width="64" height="50"/>
+        <namedColor name="Main Color">
+            <color red="0.99215686274509807" green="0.34901960784313724" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

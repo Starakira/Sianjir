@@ -17,6 +17,7 @@ class SplashScreenControllerViewController: UIViewController {
         
         let delay = 3
         self.indicatorLoading.startAnimating()
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(delay)) {
             self.indicatorLoading.stopAnimating()
             self.indicatorLoading.isHidden = true
@@ -24,22 +25,9 @@ class SplashScreenControllerViewController: UIViewController {
         
         perform(#selector(showOnboarding), with: nil, afterDelay: 3)
         print("Sukses")
-
-        // Do any additional setup after loading the view.
     }
     
     @objc func showOnboarding() {
-        performSegue(withIdentifier: "SplashSegue", sender: self)
+        performSegue(withIdentifier: K.identifier.splashSegue, sender: self)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
